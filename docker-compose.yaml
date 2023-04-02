@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+
+  resource-registry-init:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: fabos-nexus-adapter
+    environment:
+      NEXUS_URL: "${NEXUS_URL}" 
+      NEXUS_USER: "${NEXUS_USER}" 
+      NEXUS_PASSWORD: "${NEXUS_PASSWORD}" 
+      MODEL_FILETYPE: "${MODEL_FILETYPE}" 
+      SLM_HOST: "${SLM_HOST}" 
+      SLM_USER: "${SLM_USER}" 
+      SLM_PASSWORD: "${SLM_PASSWORD}" 
+      SLM_OFFERING_UUID: "${SLM_OFFERING_UUID}" 
+      SLM_OFFERING_VERSION_UUID: "${SLM_OFFERING_VERSION_UUID}" 
+      SLM_OFFERING_VERSION_OPTION_KEY: "${SLM_OFFERING_VERSION_OPTION_KEY}" 
+      UPDATE_INTERVAL: "${UPDATE_INTERVAL}" 
