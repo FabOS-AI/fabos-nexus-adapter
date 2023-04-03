@@ -1,7 +1,7 @@
 version: "3.9"
 services:
 
-  resource-registry-init:
+  fabos-nexus-adapter:
     build: 
       context: .
       dockerfile: Dockerfile
